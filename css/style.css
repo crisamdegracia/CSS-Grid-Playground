@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+body {
+  background-color: #ddd;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  /* 10 columns 
+	1st - 8rem 
+	2nd - minimum of 6rem maximum of 1fractional unit
+	3rd - repeat 8 minimum of minimum-content('size of content') maximum of 14rem 
+	4th - 1fr Fractional unit
+	*/
+  grid-template-columns: 8rem minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem)) 1fr; }
