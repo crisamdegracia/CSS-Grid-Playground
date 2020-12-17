@@ -1,0 +1,32 @@
+.story {
+
+
+	&__pictures {
+		background-image: linear-gradient(rgba($color-primary, .5), rgba($color-primary, .5)), url(../img/back.jpg);
+		background-size: cover;
+
+		grid-column: full-start / col-end 5;
+
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(6, 1fr);
+	}
+	&__content {
+		grid-column: col-start 6 / full-end ;
+		background-color: #d41;
+	}
+	
+	&__img--1 {
+		width: 100%;
+		grid-column: 2 / 6;
+		grid-row: 2/ 6;
+
+	}
+
+	&__img--2 {
+		z-index: 20;
+		width: 115%;
+		grid-column: 4 / -1;
+		grid-row:  4/ 6;
+	}
+}
