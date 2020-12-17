@@ -5,13 +5,13 @@
   padding: 0;
   box-sizing: inherit; }
 
-html {
-  font-size: 62.5%;
-  box-sizing: border-box; }
-
 body {
   font-family: "Nunito", sans-serif;
+<<<<<<< HEAD
   color: #fff;
+=======
+  color: #6D5D4B;
+>>>>>>> 23c04c7df1b66265d78338b6fb44bc7bb74cbf43
   font-weight: 300;
   line-height: 1.6; }
 
@@ -28,14 +28,23 @@ body {
 
 .features {
   grid-column: center-start / center-end;
+<<<<<<< HEAD
   padding: 20rem 5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 3rem;
+=======
+  background-color: #fff;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  grid-gap: 6rem;
+>>>>>>> 23c04c7df1b66265d78338b6fb44bc7bb74cbf43
   align-items: start; }
   .features .feature {
     display: grid;
     grid-template-columns: min-content 1fr;
+<<<<<<< HEAD
     grid-column-gap: 2rem; }
     .features .feature__icon {
       height: 4rem;
@@ -97,6 +106,58 @@ body {
   width: 115%;
   grid-column: 4 / -1;
   grid-row: 4/ 6; }
+=======
+    grid-gap: 1rem; }
+    .features .feature__icon {
+      height: 3.5rem;
+      width: 3.5rem;
+      fill: #c69963;
+      grid-row: 1 / span 2; }
+    .features .feature__text {
+      font-size: 1rem;
+      color: #444; }
+    .features .feature > * {
+      border: 1px solid red; }
+
+.footer {
+  padding: 4rem;
+  background-color: #222;
+  grid-column: full-start / full-end; }
+
+.gallery {
+  grid-column: full-start / full-end;
+  padding: 5rem;
+  background-color: #a34; }
+
+.header {
+  background-color: #101d2c;
+  height: 80vh;
+  grid-column: full-start / col-end 4; }
+
+.homes {
+  grid-column: full-start / full-end;
+  padding: 5rem;
+  background-color: #ff33; }
+
+.realtors {
+  background-color: red;
+  grid-column: col-end 4 / full-end; }
+
+.sidebar {
+  background-color: #c69963;
+  grid-row: 1 / -1;
+  grid-column: sidebar-start / sidebar-end; }
+
+.story__pictures {
+  padding: 5rem;
+  grid-column: full-start / col-end 4;
+  background-color: #3c2; }
+
+.story__content {
+  padding: 5rem;
+  grid-column: col-start 5 / -1;
+  background-color: #cc2; }
+>>>>>>> 23c04c7df1b66265d78338b6fb44bc7bb74cbf43
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
