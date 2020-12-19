@@ -14,7 +14,6 @@ $color-grey-dark-2: #6D5D4B;
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
-<<<<<<< HEAD
 
 // RESPONSIVE BREAKPOINTS
 $bp-largest: 75em;   // 1200px
@@ -31,34 +30,19 @@ $bp-small: 37.5em;    // 600px;
     padding: 0;
     box-sizing: inherit;
 }
-=======
->>>>>>> 23c04c7df1b66265d78338b6fb44bc7bb74cbf43
 
-// RESPONSIVE BREAKPOINTS
-$bp-largest: 75em;   // 1200px
-$bp-large: 62.5em;   // 1000px
-$bp-medium: 50em;    // 800px;
-$bp-small: 37.5em;    // 600px;
-
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
 }
 
 body {
-<<<<<<< HEAD
 	font-family: $font-primary;
-	// color: $color-grey-dark-2;
+	color: $color-grey-dark-2;
 	color: #fff;
-=======
-	   font-family: $font-primary;
-    color: $color-grey-dark-2;
->>>>>>> 23c04c7df1b66265d78338b6fb44bc7bb74cbf43
     font-weight: 300;
-    line-height: 1.6;
+	line-height: 1.6;
+	box-sizing: inherit;
 }
 
 .container {
@@ -77,20 +61,7 @@ body {
 	3rd - repeat 8 minimum of minimum-content('size of content') maximum of 14rem 
 	4th - 1fr Fractional unit
 	*/
-<<<<<<< HEAD
 	grid-template-columns:[sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem ) [col-end] ) [center-end] 1fr [full-end];
-=======
-	// grid-template-columns: 
-	// [sidebar-start] 8rem [sidebar-end full-start]
-	//  minmax(6rem, 1fr) [center-start]
-	//  repeat(8,
-	//  [col-start] minmax(min-content, 14rem ) [col-end])
-	//  [center-end] 1fr [full-end] ;
-
-    grid-template-columns:[sidebar-start] 8rem [sidebar-end full-start] minmax( 6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
-
-
->>>>>>> 23c04c7df1b66265d78338b6fb44bc7bb74cbf43
 	// grid-template-columns:[sidebar-start] 8rem [sidebar-end full-start] minmax( 6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
 
 // grid-template-columns: repeat(8, 1fr);

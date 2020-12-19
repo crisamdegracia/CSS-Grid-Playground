@@ -1,11 +1,81 @@
 .homes {
-<<<<<<< HEAD
-	background-color: #3cc;
-	grid-column: full-start / full-end;
-	padding: 6rem;
-=======
-	grid-column: full-start / full-end;
-	padding: 5rem;
-	background-color: #ff33;
->>>>>>> 23c04c7df1b66265d78338b6fb44bc7bb74cbf43
+	grid-column: center-start / center-end;
+	margin: 15rem 0;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	grid-gap: 7rem;
+
+	svg {
+		width: 5rem;
+		height: 5rem;
+		fill: $color-primary;
+	}
+	.home {
+		box-shadow: 1px 1px 5px #333;
+		border-radius: 3px;
+		background-color: $color-grey-light-1;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		// grid-template-rows: repeat(4, min-content);
+		grid-row-gap: 4rem;
+		transition: all .2s;
+		backface-visibility: hidden;
+		overflow: hidden;
+		& > div p {
+			// margin-left: 1rem;
+			color: #333;
+		}
+
+		& > div {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			// margin-left: 3rem;
+
+			// @include checking;
+
+		}
+
+		&__img {
+			transition: all .2s;
+			grid-row: 1 / 2;
+			grid-column: 1 / -1;
+			width: 100%;
+			z-index: 1;
+
+			&:hover {
+				transform: scale(1.5);
+			}
+		}
+		&__like {
+			grid-row: 1 / 2;
+			grid-column: 2 / 3;
+			justify-self: end;
+			z-index: 2;
+			margin: 1rem;
+		}
+
+		&__name {
+			grid-row: 1 / 2;
+			grid-column: 1 / -1;
+			z-index: 3;
+			justify-self: center;
+			align-self: end;
+			background-color: $color-secondary;
+			padding: 0.5rem 2rem;
+			font-size: 1.7rem;
+		}
+
+		&__btn {
+			grid-column: 1 / -1;
+			justify-self: center;
+			font-size: 1.3rem;
+			box-shadow: 0px 0px 3px #333;
+		}
+
+		&:hover {
+			transform: translateY(-4px);
+		}
+	}
 }
