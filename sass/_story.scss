@@ -1,8 +1,10 @@
 .story {
-
-
 	&__pictures {
-		background-image: linear-gradient(rgba($color-primary, .5), rgba($color-primary, .5)), url(../img/back.jpg);
+		background-image: linear-gradient(
+				rgba($color-primary, 0.5),
+				rgba($color-primary, 0.5)
+			),
+			url(../img/back.jpg);
 		background-size: cover;
 
 		grid-column: full-start / col-end 4;
@@ -10,10 +12,14 @@
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
 		grid-template-rows: repeat(6, 1fr);
+
+		@media only screen and (max-width: $bp-medium) {
+			grid-column: full-start / full-end;
+		}
 	}
 
 	&__content {
-		grid-column: col-start 5 / full-end ;
+		grid-column: col-start 5 / full-end;
 		background-color: $color-grey-light-1;
 		padding: 6rem 8vw;
 
@@ -22,8 +28,6 @@
 		justify-content: center;
 		align-items: flex-start;
 
-	
-		
 		//  GRID technique
 		// display: grid;
 		// align-content: center;
@@ -31,10 +35,8 @@
 
 		@media only screen and (max-width: $bp-medium) {
 			grid-column: 1 / -1;
-			grid-row: 5 / 6 ;
-		
+			grid-row: 5 / 6;
 		}
-
 	}
 	&__text {
 		font-size: 1rem;
@@ -43,18 +45,42 @@
 		margin-bottom: 4rem;
 	}
 
-
 	&__img--1 {
 		width: 100%;
 		grid-column: 2 / 6;
 		grid-row: 2/ 6;
 
+		@media only screen and (max-width: $bp-medium) {
+			grid-column: 1 / 6;
+			grid-row: 2 / 6;
+			padding-left: 3rem;
+		}
 	}
 
 	&__img--2 {
 		z-index: 20;
 		width: 115%;
 		grid-column: 4 / -1;
-		grid-row:  4/ 6;
+		grid-row: 4/ 6;
+
+		@media only screen and (max-width: $bp-medium) {
+			// display: grid;
+			width: 100%;
+			// @include checking;
+
+			grid-column: 4 / -1;
+			grid-row: 3 / 5;
+			// grid-column: 3 / 7;
+			// justify-content: center;
+			// align-content: center;
+
+			// justify-self: center;
+			// align-self: center;
+
+			// justify-items: center;
+			// align-items: center;
+			// grid-column: 2 / 5 ;
+			
+		}
 	}
 }

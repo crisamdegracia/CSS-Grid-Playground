@@ -1,46 +1,47 @@
 // COLOR VARIABLES
 $color-primary: #c69963;
-$color-primary-dark: #B28451;
+$color-primary-dark: #b28451;
 
 $color-secondary: #101d2c;
 
 $color-grey-light-1: #f9f7f6;
 $color-grey-light-2: #aaa;
 
-$color-grey-dark-1: #54483A;
-$color-grey-dark-2: #6D5D4B;
+$color-grey-dark-1: #54483a;
+$color-grey-dark-2: #6d5d4b;
 
 // FONT VARIABLES
-$font-primary: 'Nunito', sans-serif;
-$font-display: 'Josefin Sans', sans-serif;
-
+$font-primary: "Nunito", sans-serif;
+$font-display: "Josefin Sans", sans-serif;
 
 // RESPONSIVE BREAKPOINTS
-$bp-largest: 75em;   // 1200px
-$bp-large: 62.5em;   // 1000px
-$bp-medium: 50em;    // 800px;
-$bp-small: 37.5em;    // 600px;
-
-
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px;
+$bp-small: 37.5em; // 600px;
 
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
 }
 
 html {
 	font-size: 62.5%;
 	box-sizing: border-box;
+
+	@media only screen and (max-width: $bp-medium) {
+		font-size: 50%;
+	}
 }
 
 body {
 	font-family: $font-primary;
 	color: $color-grey-dark-2;
 	color: #fff;
-    font-weight: 300;
+	font-weight: 300;
 	line-height: 1.6;
 	box-sizing: inherit;
 }
@@ -50,34 +51,33 @@ body {
 	// 6 rows
 	// 1st sidebar - 80vh
 	// 2nd header and realtors  - min-content
-	// 3rd features - 40vw 
+	// 3rd features - 40vw
 	// 4th story picture and content, Homes, gallery and footer
 	grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
 
-	 
 	/* 10 columns 
 	1st - 8rem 
 	2nd - minimum of 6rem maximum of 1fractional unit
 	3rd - repeat 8 minimum of minimum-content('size of content') maximum of 14rem 
 	4th - 1fr Fractional unit
 	*/
-	grid-template-columns:[sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem ) [col-end] ) [center-end] 1fr [full-end];
+	grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem,1fr) [center-start] repeat(8,[col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
 	// grid-template-columns:[sidebar-start] 8rem [sidebar-end full-start] minmax( 6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
 
-// grid-template-columns: repeat(8, 1fr);
-// grid-template-columns:[sidebar-start] 8rem [sidebar-end full-start] minmax( 6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
+	// grid-template-columns: repeat(8, 1fr);
+	// grid-template-columns:[sidebar-start] 8rem [sidebar-end full-start] minmax( 6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
+
+	@media only screen and (max-width: $bp-large) {
 
 
+		grid-template-rows: 6rem 80vh max-content min-content repeat(3, min-content);
 
-@media only screen and (max-width: $bp-large) {
-	grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
-	grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-}
+		grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8,[col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+	}
 
-@media only screen and (max-width: $bp-medium) {
-
-	// 100vh is 1 whole screen width minus 6rems which is the top navbar
-	grid-template-rows: 6rem calc(100vh - 6rem);
-}
-
+	@media only screen and (max-width: $bp-medium) {
+		// 100vh is 1 whole screen width minus 6rems which is the top navbar
+		// eto lang ung binago kasi okay na ung sa columns
+		grid-template-rows: 6rem calc(100vh - 6rem);
+	}
 }

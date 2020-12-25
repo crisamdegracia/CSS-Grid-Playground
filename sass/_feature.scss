@@ -3,20 +3,23 @@
 	background-color: #fff;
 	margin: 15rem 0;
 	display: grid;
+
 	// grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-	grid-template-columns:repeat(auto-fit, minmax(25rem, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 	// grid-template-columns: repeat(3,min-content);
 
-
 	grid-gap: 6rem;
-	
+
 	align-items: start;
 
+
+
+	
 	.feature {
+		
 		display: grid;
 		grid-template-columns: min-content 1fr;
 		grid-gap: 1rem;
-
 
 		&__icon {
 			height: 3.5rem;
@@ -24,12 +27,12 @@
 			fill: $color-primary;
 			grid-row: 1 / span 2;
 		}
-		
+
 		&__text {
 			font-size: 1.7rem;
 			color: #444;
 		}
 
-
+	
 	}
 }
