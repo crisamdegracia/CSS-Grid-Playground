@@ -7,7 +7,7 @@
 	flex: 0 0 40%;
 	align-items: center;
 	justify-content: center;
-	
+
 	&__input {
 		font-family: inherit;
 		font-size: inherit;
@@ -36,11 +36,10 @@
 ///////////////////////////////
 //// USER NAV SIDEBAR
 .user-nav {
-	
 	display: flex;
 	align-self: stretch;
 	align-items: center;
-	
+
 	// the user-nav and all the direct children
 	& > * {
 		padding: 0 2rem;
@@ -48,7 +47,6 @@
 		height: 100%;
 		display: flex;
 		align-items: center;
-		
 	}
 
 	&__icon-box {
@@ -97,12 +95,10 @@
 	justify-items: center;
 	align-items: center;
 	&__item {
-		
 		position: relative;
 		padding: 2rem;
 		&:not(:last-child) {
 			margin-bottom: 0.5rem;
-			
 		}
 		&:hover {
 			background-color: lighten(#333, 20%);
@@ -126,38 +122,204 @@
 	font-size: 1.2rem;
 }
 
-
 .gallery {
 	display: flex;
-	
-		&__photo {
-			display: block;
-			width: 100%;
-		}
 
-		&__item {
+	&__photo {
+		display: block;
+		width: 100%;
+	}
 
-		}
+	&__item {
+	}
 }
-
 
 .overview {
 	display: flex;
-	justify-content: space-evenly;
-	@include check;
+	align-items: center;
+	background-color: #fff;
 
+	// & > * {
+	// 	@include check;
+	// }
 	&__heading {
-
-	}	
-	
-	&__stars{
+		font-size: 2.25rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		padding: 1.5rem 3rem;
 	}
-	
-	&__icon-star {
-		width: 3rem;
+
+	&__stars {
+		margin-right: auto;
+		align-content: stretch;
+	}
+
+	&__icon-star,
+	&__icon-location {
+		width: 1.75rem;
+		height: 1.75rem;
+		fill: $color-primary;
 	}
 
 	&__icon-location {
-		width: 3rem;
+		margin-right: 0.5rem;
+	}
+
+	&__location {
+		font-size: 1.2rem;
+		display: flex;
+		vertical-align: center;
+	}
+
+	&__rating {
+		align-self: stretch;
+		margin-left: 3rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.detail {
+	display: flex;
+	justify-content: space-between;
+	// align-content: center;
+	background-color: $color-grey-light-2;
+	padding: 4rem;
+	font-size: 1.3rem;
+	border-bottom: 1px solid #000;
+
+	.description {
+		border-radius: 3px;
+		box-shadow: 0.1px 0.1px 1px #000;
+		margin-right: 2rem;
+		background-color: $color-grey-light-1;
+		padding: 2rem;
+		// flex: 0 0 60%;
+		.paragraph {
+			padding: 2rem;
+		}
+		.paragraph:last-child {
+			border-bottom: 1px solid #000;
+		}
+		.list {
+			list-style: none;
+			margin: 3rem 0;
+			padding: 3rem 0;
+
+			display: flex;
+			flex-wrap: wrap;
+
+			&__item {
+				flex: 0 0 50%;
+				margin-bottom: 0.7rem;
+			}
+
+			&__item::before {
+				content: "";
+				display: inline-block;
+				height: 1rem;
+				width: 1rem;
+				margin-right: 0.7rem;
+
+				// Older browsers
+				background-image: url(../img/chevron-thin-right.svg);
+				background-size: cover;
+
+				background-color: red;
+				-webkit-mask-image: url(../img/chevron-thin-right.svg);
+				-webkit-mask-size: cover;
+				background-image: none;
+			}
+		}
+	}
+
+	.recommend {
+		display: flex;
+		justify-content: space-between;
+		padding: 2rem;
+		&__count {
+		}
+
+		&__friends {
+		}
+
+		&__photo {
+			box-sizing: content-box;
+			align-self: flex-end;
+			border-radius: 50%;
+			width: 3.5rem;
+			height: 3.5rem;
+			margin-right: -2rem;
+			border: 3px solid #fff;
+
+			&:not(:last-child) {
+				margin-right: -2rem;
+			}
+		}
+	}
+
+	.user-reviews {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.review {
+			border-radius: 3px;
+			box-shadow: 0.1px 0.1px 1px #000;
+			padding: 4rem;
+
+			background-color: $color-grey-light-1;
+			margin-bottom: 3rem;
+
+			&__text {
+				padding: 1.3rem;
+			}
+
+			&__user {
+				display: flex;
+				align-items: center;
+			}
+
+			&__photo {
+				width: 4rem;
+				height: 4rem;
+				margin-right: 2rem;
+				border-radius: 50%;
+			}
+
+			&__user {
+				display: flex;
+				align-content: center;
+				align-items: center;
+				justify-content: space-between;
+
+				&-box {
+					margin-right: auto;
+				}
+
+				&-name {
+				}
+
+				&-date {
+					align-self: flex-start;
+				}
+			}
+
+			&__rating {
+			}
+		}
+		.btn-inline {
+			// display: inline-block;
+			// background-color: #234;
+			// margin:0 auto;
+			// text-align: center;
+			// justify-content: center;
+			align-self: center;
+			// align-items: center;
+			// justify-items: center;
+		}
 	}
 }
