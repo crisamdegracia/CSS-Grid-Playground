@@ -235,7 +235,6 @@ body {
   max-width: 120rem;
   margin: 8rem auto;
   min-height: 50rem;
-  height: 80vh;
   background-color: #faf9f9; }
 
 .header {
@@ -258,3 +257,16 @@ body {
 .hotel-view {
   flex: 1;
   background-color: #442; }
+
+.footer {
+  padding: 3rem;
+  background-color: #333; }
+  .footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .footer ul li {
+      list-style: none;
+      padding: 3rem; }
+      .footer ul li:hover {
+        background-color: #222; }
